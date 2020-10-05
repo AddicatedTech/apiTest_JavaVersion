@@ -13,7 +13,7 @@ class WeworkTest {
     @Test
     void getWeworkToken() {
         Wework wework = new Wework();
-        String weworkToken = wework.getWeworkToken();
+        String weworkToken = wework.getWeworkToken(WeworkConfig.getInstance().secret);
         assertThat(weworkToken,not(equalTo(null)));
     }
 }
